@@ -27,16 +27,25 @@ public class Menu {
 		case 1:
 			vazio++;
 			
-			System.out.println("Insira o ano:");
+			System.out.println("Insira o ano(2011->2020):");
 			ano = ler.nextInt();
 			pos_ano = recupera_pos_ano(ano);
-			
+			if(pos_ano == -1) {
+				System.out.println("ano não disponível.");
+				break;
+			}			
 			System.out.println("Insira o mes:");
 			mes = ler.nextInt();
 			pos_mes = recupera_pos_mes(mes);
-			
+			if(pos_mes == -1) {
+				System.out.println("mes não disponível.");
+				break;
+			}				
 			ult_dia = recupera_ultimo_dia(ano,mes);
-			
+			if(ult_dia == -1) {
+				System.out.println("dia não disponível");
+				break;
+			}				
 			for(cont_dia=0;cont_dia<ult_dia;cont_dia++) {
 				System.out.println("Digite a temperatura do dia "+(cont_dia+1));
 				dia = ler.nextInt();
@@ -49,12 +58,24 @@ public class Menu {
 				System.out.println("Insira o ano:");
 				ano = ler.nextInt();
 				pos_ano = recupera_pos_ano(ano);
+				if(pos_ano == -1) {
+					System.out.println("ano não disponível.");
+					break;
+				}
 				
 				System.out.println("Insira o mes:");
 				mes = ler.nextInt();
 				pos_mes = recupera_pos_mes(mes);
+				if(pos_mes == -1) {
+					System.out.println("mes não disponível.");
+					break;
+				}
 				
 				ult_dia = recupera_ultimo_dia(ano,mes);
+				if(ult_dia == -1) {
+					System.out.println("dia não disponível");
+					break;
+				}
 				
 				for(cont_dia=0;cont_dia<ult_dia;cont_dia++){
 					soma += temp[pos_ano][pos_mes][cont_dia];
@@ -74,13 +95,25 @@ public class Menu {
 				System.out.println("Insira o ano:");
 				ano = ler.nextInt();
 				pos_ano = recupera_pos_ano(ano);
+				if(pos_ano == -1) {
+					System.out.println("ano não disponível.");
+					break;
+				}
 				
 				System.out.println("Insira o mes:");
 				mes = ler.nextInt();
 				pos_mes = recupera_pos_mes(mes);
+				if(pos_mes == -1) {
+					System.out.println("mes não disponível.");
+					break;
+				}
 				mesextenso = recupera_mes_extenso(mes);
 								
 				ult_dia = recupera_ultimo_dia(ano,mes);
+				if(ult_dia == -1) {
+					System.out.println("dia não disponível");
+					break;
+				}
 				
 				menor=temp[pos_ano][pos_mes][0];
 				menor_dia =String.valueOf(1);
@@ -108,13 +141,25 @@ public class Menu {
 				System.out.println("Insira o ano:");
 				ano = ler.nextInt();
 				pos_ano = recupera_pos_ano(ano);
+				if(pos_ano == -1) {
+					System.out.println("ano não disponível.");
+					break;
+				}
 				
 				System.out.println("Insira o mes:");
 				mes = ler.nextInt();
 				pos_mes = recupera_pos_mes(mes);
+				if(pos_mes == -1) {
+					System.out.println("mes não disponível.");
+					break;
+				}
 				mesextenso = recupera_mes_extenso(mes);
 				
 				ult_dia = recupera_ultimo_dia(ano,mes);
+				if(ult_dia == -1) {
+					System.out.println("dia não disponível");
+					break;
+				}
 				
 				maior=temp[pos_ano][pos_mes][0];
 				maior_dia =String.valueOf(1);
@@ -141,13 +186,25 @@ public class Menu {
 			System.out.println("Insira o ano:");
 			ano = ler.nextInt();
 			pos_ano = recupera_pos_ano(ano);
+			if(pos_ano == -1) {
+				System.out.println("ano não disponível.");
+				break;
+			}
 			
 			System.out.println("Insira o mes:");
 			mes = ler.nextInt();
 			System.out.println();
 			pos_mes = recupera_pos_mes(mes);
+			if(pos_mes == -1) {
+				System.out.println("mes não disponível.");
+				break;
+			}
 			
 			ult_dia = recupera_ultimo_dia(ano,mes);
+			if(ult_dia == -1) {
+				System.out.println("dia não disponível");
+				break;
+			}
 			
 			for(cont_dia=0;cont_dia<ult_dia;cont_dia++) {
 				System.out.println("A temperatura do dia "+(cont_dia +1)+" é de "+temp[pos_ano][pos_mes][cont_dia]);
